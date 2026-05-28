@@ -1,0 +1,108 @@
+/* ==========================================================
+   WORLD VISION FMNR MODERN DASHBOARD DESIGN
+   ========================================================== */
+:root {
+    --wv-orange: #FF6B00;
+    --wv-dark-charcoal: #1E1E24;
+    --wv-bg-gradient: linear-gradient(135deg, #FFF3E0 0%, #F5F7F6 100%);
+    --panel-white: #FFFFFF;
+    --text-main: #1A1A1A;
+    --fmnr-green: #2E7D32;
+}
+
+/* App Background & Base Styling */
+html, body, [data-testid="stAppViewContainer"] {
+    background: var(--wv-bg-gradient) !important;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif !important;
+    color: var(--text-main);
+}
+
+/* Sidebar Custom Styling */
+[data-testid="stSidebar"] {
+    background-color: var(--wv-dark-charcoal) !important;
+}
+[data-testid="stSidebar"] *, [data-testid="stSidebar"] span {
+    color: #FFFFFF !important;
+}
+
+/* GIANT HERO HEADER BANNER */
+.hero-banner {
+    background: rgba(255, 255, 255, 0.85);
+    border-left: 8px solid var(--wv-orange);
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.hero-banner h1 {
+    font-size: 38px !important;
+    font-weight: 800 !important;
+    color: var(--wv-dark-charcoal) !important;
+    line-height: 1.2 !important;
+    margin: 0 0 10px 0 !important;
+    letter-spacing: -0.5px;
+}
+
+.hero-banner h3 {
+    font-size: 18px !important;
+    color: #555555 !important;
+    margin: 0 !important;
+    font-weight: 500 !important;
+}
+
+/* SPECIES & INFORMATION CARDS */
+.species-card {
+    background: var(--panel-white);
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #EAEAEA;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+.species-title {
+    font-weight: 700;
+    color: var(--fmnr-green);
+    font-size: 16px;
+}
+
+.species-meta {
+    font-style: italic;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+/* SYNCHRONIZE BUTTON DESIGN */
+div.stButton > button {
+    background-color: var(--wv-orange) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    padding: 14px 28px !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    border-radius: 8px !important;
+    width: 100% !important;
+    box-shadow: 0 5px 15px rgba(255,107,0,0.3) !important;
+    transition: all 0.3s ease !important;
+}
+
+div.stButton > button:hover {
+    background-color: #E65C00 !important;
+    transform: translateY(-2px) !important;
+}
+/* Fix Streamlit Selectbox Invisible Text issue */
+div[data-baseweb="select"] {
+    color: #111111 !important;
+}
+
+div[data-baseweb="select"] * {
+    color: #111111 !important;
+}
+
+/* Ensures the fallback input text is readable */
+.stSelectbox input {
+    color: #111111 !important;
+}
